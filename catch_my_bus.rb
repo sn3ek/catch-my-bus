@@ -37,7 +37,10 @@ class TramStation
   def parse_arrival(arrival)
     arrival[2] = 0 if arrival[2] == ""
     arrival[2] = arrival[2].to_i
-    @destinations["#{arrival[0]} #{arrival[1]}"] = arrival[2] if @destinations[arrival[1]].nil? or @destinations[arrival[1]] > arrival[2] 
+    dest = "#{arrival[0]} #{arrival[1]}"
+    if @destinations[dest].nil? or @destinations[dest] > arrival[2] 
+      @destinations[dest] = arrival[2]
+    end
   end
 
   def update
