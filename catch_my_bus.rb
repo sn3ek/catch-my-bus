@@ -22,6 +22,7 @@ class TramStation
   def show
     puts @name
     puts print
+    puts
   end
 
   def print
@@ -55,6 +56,7 @@ while true do
 stations.each{ |station|
   station.update
   station.notify
+  station.show
   sleep @little_sleep
 }
 sleep @big_sleep
