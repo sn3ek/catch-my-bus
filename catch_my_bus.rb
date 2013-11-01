@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
+# This file is distributed under the terms of the
+# GNU General Public License 2.
+# Please see the COPYING-GPL-2 file for details.
 
 require 'net/http'
 require 'json'
@@ -35,7 +38,7 @@ class TramStation
     return string
   end
   def notify
-    Notify.notify @name, print(), {App:"Catch My Bus", :icon => (File.join$SCRIPT_PATH, "Bushaltestelle.png" )}
+    Notify.notify @name, print(), {app:"Catch My Bus", :icon => (File.join$SCRIPT_PATH, "Bushaltestelle.png" )}
   end
 
   def parse_arrival(arrival)
