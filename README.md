@@ -7,3 +7,7 @@ simple script that pops up notifications about your next bus
 
 edit the `stations` array and run in backround terminal
 there is no UX yet
+
+## known issues
+
+* the dvb api will apparently block your ip after n requests
