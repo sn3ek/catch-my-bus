@@ -11,3 +11,5 @@ there is no UX yet
 ## known issues
 
 * the dvb api will apparently block your ip after n requests
+
+icon by http://openclipart.org/detail/182201/bushaltestelle-by-tumsi-182201

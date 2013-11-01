@@ -5,6 +5,9 @@ require 'json'
 require 'notify'
 require 'pp'
 
+$SCRIPT_PATH = File.split(File.expand_path(__FILE__))[0]
+
+
 @big_sleep = 180
 @little_sleep = 2
 
@@ -31,7 +34,7 @@ class TramStation
     return string
   end
   def notify
-    Notify.notify @name, print()
+    Notify.notify @name, print(), {App:"Catch My Bus", :icon => (File.join$SCRIPT_PATH, "Bushaltestelle.png" )}
   end
 
   def parse_arrival(arrival)
